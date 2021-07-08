@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+html {
+    font-size: 16px;
+}
+
+.editor-menu{
+    width: 100%;
+    height: 6rem;
+    background-color: rgb(241, 204, 217);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 0 5px 10px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: palevioletred;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 3px;
+    font-size: 1rem;
+    margin-right: 8px;
+    min-width: 50px;
+    transition: all .5s;
+}
+
+.btn:hover{
+    background-color: rgb(207, 54, 105);
+}
+
+.live{
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid palevioletred;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    width: 70px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.live > * {
+    cursor: pointer;
+}
+
+.container{
+    position: absolute;
+    bottom: 0;
+    top: 100px;
+    width: 100%;
+    display: flex;
+}
+
+.left, .right {
+    height: 100%;
+    width: 50%;
+    border: 1px solid lightgrey;
+}
+
+.bar{
+    width: 4px;
+    height: 100%;
+    background-color: #eee;
+    cursor: w-resize;
+}
+
+.right {
+    flex: 1;
+}
+
+.editor{
+    width: 100%;
+    height: 100%;
+    font-size: 1.2 rem;
+    outline: none;
+    padding: 1rem 0 0 1rem ;
+    border: #ccc;
+}
+
+.iframe {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    overflow-y: auto;
+    white-space: pre;
+    right: 0;
+    padding: 4px;
+}
+
+
+@media(max-width : 600px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .left, .right{
+        height: auto;
+        width: 100%;
+    }
+    .left{
+        min-height: 400px;
+    }
+    .bar{
+        height: 0;
+    }
+}
